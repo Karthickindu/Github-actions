@@ -31,10 +31,12 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           APP_ENV: ${{ vars.APP_ENV }}
           API_URL: $ {{ vars.API_URL }}
+          APP_NAME: ${{ vars.APP_NAME }}
         run: |
           echo "Environment: $APP_ENV"
           echo "API_URL: $API_URL"
           echo "Secret is configured"
+          echo "Application: $APP_NAME"
 
       - name: Run Tests
         run: |
